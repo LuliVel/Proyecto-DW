@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+<body>
+
+    <header>
+        <h1>📘 Plataforma de Guías Académicas</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'publicaciones' %}">Publicaciones</a></li>
+                <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                <li><a href="{% url 'register' %}">Registrarse</a></li>
+                <li><a href="{% url 'admin:index' %}">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        {% block content %}
+        <!-- Contenido individual de cada página -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 Plataforma Guías Académicas | UMG</p>
+        <p>© 2025 Leslie Velásquez | UMG</p>
+    </footer>
+
+</body>
+</html>
