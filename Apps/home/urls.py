@@ -17,9 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from Apps.home import views
-from .views import HomeView, loginView, publicacionesView
+from .views import HomeView, loginView, registerView
 
 urlpatterns = [
-    path('', HomeView.as_view(), name='homeapp'),
-    path('', loginView.as_view(), name='loginapp'),
+    path('', views.HomeView.as_view(), name='home'),
+    path('login/', loginView.as_view(), name='login'),
+    path('register/', registerView.as_view(), name='register'),
+    path('crear_guia/', views.crear_guiaView.as_view(), name='crear_guia'),
+    path('listar_guias/', views.listar_guiasView.as_view(), name='listar_guias'), 
+    path('detalle_guia/', views.detalle_guiaView.as_view(), name='detalle_guia'),
+
 ]

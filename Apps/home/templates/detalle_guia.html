@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ guia.titulo }} - Plataforma</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">Guías Académicas</a>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h2>{{ guia.titulo }}</h2>
+    <p class="text-muted">Autor: {{ guia.autor }} | {{ guia.fecha_publicacion|date:"d/m/Y" }}</p>
+    <hr>
+    <p>{{ guia.descripcion }}</p>
+    {% if guia.archivo_url %}
+      <a href="{{ guia.archivo_url }}" class="btn btn-primary">Descargar / Ver archivo</a>
+    {% endif %}
+    <a href="/guias/" class="btn btn-secondary ms-2">← Volver</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

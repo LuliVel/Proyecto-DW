@@ -10,6 +10,14 @@ class HomeView(TemplateView):
 class loginView(TemplateView):
     template_name= 'login.html'
 
-class publicacionesView(TemplateView):
-    template_name= 'publicaciones.html'
+class registerView(TemplateView):
+    template_name= 'register.html'
     
+class listar_guiasView(TemplateView):
+    template_name= 'listar_guias.html'
+
+class crear_guiaView(TemplateView):
+    template_name= 'crear_guia.html'
+    
+class detalle_guiaView(TemplateView):
+    template_name= 'detalle_guia.html'

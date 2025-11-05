@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
-{% load static %}
 
-{% block title %}Inicio - Guías Académicas{% endblock %}
+{% block title %}Inicio{% endblock %}
 
 {% block content %}
-
-<h2>Bienvenido a la Plataforma de Guías Académicas</h2>
-<p>Aquí podrás encontrar guías, compartir conocimiento y aprender junto a otros estudiantes.</p>
+  <div class="text-center">
+    <h1>Bienvenido a la Plataforma de Guías Académicas</h1>
+    <p class="lead">Explora y comparte guías de estudio con otros estudiantes.</p>
+    <a href="{% url 'listar_guias' %}" class="btn btn-primary">Ver Guías</a>
+    <a href="{% url 'crear_guia' %}" class="btn btn-success">Subir Guía</a>
+  </div>
 {% endblock %}
